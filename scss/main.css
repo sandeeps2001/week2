@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  font-size: x-large;
+  background-color: white;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right bottom, rgba(54, 36, 2, 0.5), rgba(0, 0, 0, 0.616)), url(/emiel-maters-2prWrSjtIJg-unsplash.jpg);
+  background-size: cover;
+  align-content: center;
+}
+
+.container {
+  display: flex;
+  margin: 0;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+}
+
+.box1 {
+  width: 200px;
+  margin: 20px;
+  height: 200px;
+  background-image: url(/eggs.JPG);
+  background-position: center;
+}
+
+.block {
+  margin: 20px;
+  color: black;
+  height: 200px;
+  width: 200px;
+}
+
+nav {
+  background-color: black;
+}
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.navigation {
+  list-style: none;
+  float: left;
+  padding: 20px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+.navigation li {
+  font: bold;
+  display: inline-block;
+  margin-left: 30px;
+}
+.navigation li:first-child:hover {
+  background-color: orange;
+}
+.navigation li:nth-child(3):hover {
+  background-color: chartreuse;
+}
+.navigation li:nth-child(2):hover {
+  background-color: violet;
+}
+.navigation li a {
+  color: white;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+.navigation li a:link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navigation li:nth-child(4):hover {
+  color: aqua;
+  background-color: brown;
+}
+
+.button {
+  float: right;
+  padding-top: 20px;
+}
+
+.newbutton1, .newbutton {
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  text-transform: uppercase;
+}
+
+.btn-main:link, .btn-hot:link {
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  text-transform: uppercase;
+}
+
+.btn-main:link {
+  background-color: white;
+}
+.btn-main:hover {
+  background-color: black;
+}
+
+.btn-hot:link {
+  background-color: white;
+}
+.btn-hot:hover {
+  background-color: rgb(0, 99, 247);
+}
+
+.newbutton:link {
+  background-color: white;
+}
+.newbutton:hover {
+  background-color: black;
+}
+
+.newbutton1:link {
+  background-color: white;
+}
+.newbutton1:hover {
+  background-color: rgb(0, 99, 247);
+}/*# sourceMappingURL=main.css.map */

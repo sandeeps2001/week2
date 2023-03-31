@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+        text-align: center;
+        padding: 20px;
+        font-size: x-large;
+        background-color: white;
+    
+}
+body{
+    width:100%;
+    height: 100%;
+    background-image:linear-gradient(to right bottom, rgba(54, 36, 2, 0.5),rgba(0, 0, 0, 0.616)),url(/emiel-maters-2prWrSjtIJg-unsplash.jpg);
+    background-size: cover;
+    align-content: center;
+   
+
+}
+
+
+.container{
+    display: flex;
+    margin: 0;
+    
+}
+
+.grid{
+    width : 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px , 1fr));  
+    grid-auto-rows: 100px;
+    }
+    
+
+.box1{
+width: 200px;
+margin:  20px;
+height: 200px;
+background-image: url(/eggs.JPG);
+background-position: center;
+}
+
+$color-primary : rgb(0, 99, 247);
+
+$color-secondary : white;
+$color-third : orange ;
+$color-dark: rgb(8, 8, 8);
+$width-button : 2px;
+$col : black;
+@mixin clearfix{
+    &::after {
+        content: '' ;
+        clear: both ;
+        display: table;
+}
+}
+
+%specific{
+    margin : 20px;
+    color: black;
+    height: 200px;
+    width: 200px;
+}
+
+
+
+
+    
+
+nav{
+background-color: black;
+@include clearfix;
+}
+
+.navigation{
+list-style: none;
+float: left;
+padding: 20px;
+margin-top: 20px;
+padding-bottom: 40px;
+li{
+    font:bold;
+    display: inline-block;
+    margin-left: 30px;
+    &:first-child:hover{
+        background-color: orange;
+    }
+    &:nth-child(3):hover{
+        background-color: chartreuse;
+    }
+   &:nth-child(2):hover{
+    background-color:  violet;
+   }
+a{
+    color: white;
+    text-decoration: solid;
+}  
+    a:link{
+        text-decoration: none;
+        text-transform: uppercase;
+
+        
+    }
+    &:nth-child(4):hover{
+        color :aqua;
+        background-color: brown;
+           }
+}
+
+}
+.button{
+    float: right;
+    padding-top: 20px;
+}
+
+
+@mixin bdes($col){
+    &:link{
+           background-color: $color-secondary;
+       }
+       &:hover{
+           background-color: $col;
+       }
+    }
+
+%btn-placeholder{
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    text-decoration: dotted;
+    text-transform: uppercase;
+}
+
+
+
+.btn-main:link, .btn-hot:link{
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    text-decoration: dotted;
+    text-transform: uppercase;
+  
+}
+
+
+
+.btn-main{
+    @include bdes($col);
+}
+
+.btn-hot{
+   @include bdes($color-primary);
+}
+
+.newbutton{
+    @extend %btn-placeholder;
+    @include bdes($col);
+
+}
+.newbutton1{ 
+@extend %btn-placeholder;
+@include bdes($color-primary);
+}
